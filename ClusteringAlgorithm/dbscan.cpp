@@ -47,7 +47,7 @@ void DBSCAN::clustering(const vector<QPointF>& points, vector<int>& labels, doub
                     vector<int> neighborNeighbors;
 
                     for (int k = 0; k < n; ++k) {
-                        if (sqrt(std::pow(points[neighborIdx].x() - points[k].x(), 2) + pow(points[neighborIdx].y() - points[k].y(), 2)) <= eps) {
+                        if (sqrt(pow(points[neighborIdx].x() - points[k].x(), 2) + pow(points[neighborIdx].y() - points[k].y(), 2)) <= eps) {
                             neighborNeighbors.push_back(k);
                         }
                     }
